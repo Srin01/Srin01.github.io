@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./SearchBar.css";
 
-sortByOptions = {
+let sortByOptions = {
     "Best Match" : "best_match",
     "Highest Rated" : "rating",
     "Most Reviwed" : "review_count",
@@ -23,7 +23,7 @@ class SearchBar extends Component {
             <div className= "SearchBar">
                 <div className = "SearchBar-sort_options">
                     <ul>
-                        {renderSortByOptions()}
+                        {this.renderSortByOptions}
                     </ul>
                 </div>
                 <div className = "SearchBar-fields">
@@ -37,3 +37,4 @@ class SearchBar extends Component {
         );
     }
 }
+export default SearchBar;
