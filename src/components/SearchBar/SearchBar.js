@@ -21,9 +21,9 @@ class SearchBar extends Component {
     render(){
         return (
             <div className= "SearchBar">
-                <div className = "SearchBar-sort_options">
+                <div className = "SearchBar-sort-options">
                     <ul>
-                        {this.renderSortByOptions}
+                        {this.renderSortByOptions()}
                     </ul>
                 </div>
                 <div className = "SearchBar-fields">
