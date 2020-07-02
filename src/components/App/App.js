@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import BusinessList from "../BusinessList/BusinessList";
 import SearchBar from "../SearchBar/SearchBar";
@@ -17,13 +17,19 @@ reviewCount: 90
 
 const businesses = [business,business,business,business,business,business]
 
-function App() {
-  return (
-  <div className = "App">
-    <SearchBar />
-    <BusinessList businesses = {businesses}/>
-  </div>
+class App extends Component {
+  searchYelp(term,location,sortby) {
+    console.log(`Searching Yelp with ${term}, ${location}, ${sortby}`)
+
+  }
+  render(){
+    return (
+      <div className = "App">
+        <SearchBar searchYelp = {this.searchYelp}/>
+        <BusinessList businesses = {businesses}/>
+      </div>
   );
+}
 }
 
 export default App;
